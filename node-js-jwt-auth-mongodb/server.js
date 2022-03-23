@@ -9,13 +9,10 @@ var corsOptions = {
 };
 
 db.mongoose
-  .connect(
-    `mongodb+srv://FOODAPP:FOODAPP@cluster0.mb5up.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,
-    {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    }
-  )
+  .connect(``, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
   .then(() => {
     console.log("Successfully connect to MongoDB.");
     initial();
