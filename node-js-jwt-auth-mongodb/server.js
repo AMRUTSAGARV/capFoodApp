@@ -7,9 +7,9 @@ const Role = db.role;
 var corsOptions = {
   origin: "http://localhost:8081",
 };
-
+// console.log(process.env.MONGO_URI)
 db.mongoose
-  .connect(process.env.MONGO_URL, {
+  .connect(`${process.env.MONGO_URI}`, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
@@ -33,6 +33,7 @@ app.get("/", (req, res) => {
 // routes
 require("./app/routes/auth.routes")(app);
 require("./app/routes/user.routes")(app);
+require("./app/routes/order.routes")(app);
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
