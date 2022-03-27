@@ -22,13 +22,20 @@ import { Routes, Route } from "react-router-dom";
 import React from "react";
 import "./App.css";
 import SignInOutContainer from "./containers";
-import Home from "./components/Home";
+import AddFood from "./components/AddFood/AddFood";
+import RequestFood from "./components/RequestFood/RequestFood";
+// import Home from "./components/Home";
 import AuthService from "./services/auth.service";
-import Header from "./components/Header/Header";
+// import Header from "./components/Header/Header";
 import Donation from "./components/Donation/Donation";
 import Slider from "./components/Slider/Slider";
 import Footer from "./components/Footer/Footer";
+import Logout from "./components/Logout/Logout";
+import Orders from "./components/Orders/Orders";
 // import Home from "./components/Home";
+import Home from "./components/Home/Home";
+import Header from "./components/Header";
+import Layout from "./components/Layout";
 
 const App = () => {
   // const [showModeratorBoard, setShowModeratorBoard] = useState(false);
@@ -50,12 +57,27 @@ const App = () => {
       <Routes>
         {/* <SignInOutContainer /> */}
         <Route exact path="/" element={<SignInOutContainer />} />
+        {/* <Route
+          exact
+          path="/home"
+          element={[<Header />, <Slider />, <Home />, <Footer />]}
+        />
+        <Route path="/home/donation" element={[<Donation />]} /> */}
         <Route
           exact
           path="/home"
           element={[<Header />, <Slider />, <Home />, <Footer />]}
         />
-        <Route path="/home/donation" element={[<Donation />]} />
+
+        <Route path="/add-food" element={<AddFood />} />
+
+        <Route path="/request-food" element={<RequestFood />} />
+
+        <Route path="/donate" element={<Donation />} />
+
+        <Route path="/orders" element={<Orders />} />
+        <Route path="/logout" element={<Logout />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
 
       {/* <nav className="navbar navbar-expand navbar-dark bg-dark">

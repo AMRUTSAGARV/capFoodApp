@@ -1,7 +1,8 @@
 import "./Donation.css";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import Header from "../Header/Header";
+// import Header from "../Header/Header";
+import Header from "../Header";
 
 function App() {
   const [loading, setLoading] = useState(false);
