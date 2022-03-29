@@ -9,7 +9,7 @@ var corsOptions = {
 };
 // console.log(process.env.MONGO_URI)
 db.mongoose
-  .connect({
+  .connect(``, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })

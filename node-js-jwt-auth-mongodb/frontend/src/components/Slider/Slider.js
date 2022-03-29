@@ -12,7 +12,7 @@ function Slider() {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex(activeIndex === len ? 0 : activeIndex + 1);
-    }, 5000);
+    }, 3500);
     return () => clearInterval(interval);
   }, [activeIndex]);
 

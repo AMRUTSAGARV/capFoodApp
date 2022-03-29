@@ -13,7 +13,7 @@
 //
 import Login from "./components/Login";
 import Register from "./components/Register";
-// import Home from "./components/Home";
+
 import Profile from "./components/Profile";
 import BoardUser from "./components/BoardUser";
 import BoardModerator from "./components/BoardModerator";
@@ -22,20 +22,22 @@ import { Routes, Route } from "react-router-dom";
 import React from "react";
 import "./App.css";
 import SignInOutContainer from "./containers";
-import AddFood from "./components/AddFood/AddFood";
-import RequestFood from "./components/RequestFood/RequestFood";
-// import Home from "./components/Home";
-import AuthService from "./services/auth.service";
-// import Header from "./components/Header/Header";
-import Donation from "./components/Donation/Donation";
-import Slider from "./components/Slider/Slider";
-import Footer from "./components/Footer/Footer";
-import Logout from "./components/Logout/Logout";
-import Orders from "./components/Orders/Orders";
-// import Home from "./components/Home";
+// import Layout from "./components/Header/Layout";
 import Home from "./components/Home/Home";
 import Header from "./components/Header";
 import Layout from "./components/Layout";
+import AuthService from "./services/auth.service";
+import AddFood from "./components/AddFood/AddFood";
+import Donation from "./components/Donation/Donation";
+import Slider from "./components/Slider/Slider";
+import Footer from "./components/Footer/Footer";
+// import AddFood from "./components/AddFood/AddFood";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import RequestFood from "./components/RequestFood/RequestFood";
+import Orders from "./components/Orders/Orders";
+// import ProfileLgOut from "./components/Logout/Logout";
+import Logout from "./components/Logout/Logout";
 
 const App = () => {
   // const [showModeratorBoard, setShowModeratorBoard] = useState(false);

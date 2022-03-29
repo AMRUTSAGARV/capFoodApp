@@ -1,64 +1,56 @@
-// import React from "react";
-// import AuthService from "../services/auth.service";
-// const Profile = () => {
-//   const currentUser = AuthService.getCurrentUser();
-//   return (
-//     <div className="container">
-//       <header className="jumbotron">
-//         <h3>
-//           <strong>{currentUser.username}</strong> Profile
-//         </h3>
-//       </header>
-//       <p>
-//         <strong>Token:</strong> {currentUser.accessToken.substring(0, 20)} ...{" "}
-//         {currentUser.accessToken.substr(currentUser.accessToken.length - 20)}
-//       </p>
-//       <p>
-//         <strong>Id:</strong> {currentUser.id}
-//       </p>
-//       <p>
-//         <strong>Email:</strong> {currentUser.email}
-//       </p>
-//       <strong>Authorities:</strong>
-//       <ul>
-//         {currentUser.roles &&
-//           currentUser.roles.map((role, index) => <li key={index}>{role}</li>)}
-//       </ul>
-//     </div>
-//   );
-// };
-// export default Profile;
-
 import React from "react";
 import AuthService from "../services/auth.service";
 import Header from "./Header";
 const Profile = () => {
   const currentUser = AuthService.getCurrentUser();
   return (
-    <div className="container">
+    <div>
       <Header />
-      <header className="jumbotron">
-        <h3>
-          Hi! <strong>{currentUser.username}</strong> This is your Profile
-          Details
-        </h3>
-      </header>
-      <p>
+      <div className="mydetails">
+        <h3 className="p-3 text-center">Your Details :</h3>
+        <table className="table table-striped table-bordered" border="6">
+          <tr>
+            <th>UserName -:</th>
+            <th>E-Mail -:</th>
+            <th>Role -:</th>
+          </tr>
+          <tr>
+            <th>{currentUser.username}</th>
+            <th>{currentUser.email}</th>
+            <th>
+              {currentUser.roles &&
+                currentUser.roles.map((role, index) => (
+                  <li key={index}>{role}</li>
+                ))}
+            </th>
+          </tr>
+        </table>
+        {/* <li>
+          <header>
+            Username : <strong>{currentUser.username}</strong>
+          </header>
+        </li> */}
+        {/* <p>
         <strong>Token:</strong> {currentUser.accessToken.substring(0, 20)} ...{" "}
         {currentUser.accessToken.substr(currentUser.accessToken.length - 20)}
       </p>
       <p>
         <strong>Id:</strong> {currentUser.id}
-      </p>
-      <p>
-        <strong>Email:</strong> {currentUser.email}
-      </p>
-      {/* earlier here was "Authorities" */}
-      <strong>Your Registered Role : </strong>
-      <ul>
-        {currentUser.roles &&
-          currentUser.roles.map((role, index) => <li key={index}>{role}</li>)}
-      </ul>
+      </p> */}
+        {/* <li>
+          <strong>Email :</strong> {currentUser.email}
+        </li> */}
+        {/* "Authorities" was changed */}
+        {/* <strong>Your Registered Role : </strong>
+        <li>
+          <ul>
+            {currentUser.roles &&
+              currentUser.roles.map((role, index) => (
+                <li key={index}>{role}</li>
+              ))}
+          </ul>
+        </li> */}
+      </div>
     </div>
   );
 };
