@@ -54,6 +54,76 @@
   margin-left: 200px;
 } */
 
+/* .image {
+  background-image: url(https://b.zmtcdn.com/data/o2_assets/b90ed7f7c7f06ce7a5b94b967d4ce3eb1621255947.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+.donate-heading {
+  max-width: 300px;
+}
+
+.donate-header {
+  max-width: 600px;
+  margin-left: 500px;
+  margin: 0 auto;
+  color: white;
+}
+
+#form-view {
+  width: 100%;
+  margin-right: 300px;
+  float: right;
+  margin-top: 80px;
+}
+
+.form {
+  margin-top: 20px;
+  color: white;
+}
+
+.donation-details {
+  display: block;
+  
+}
+
+.details-screen {
+  margin-left: 60px;
+  margin-top: 80px;
+}
+
+.donation-details {
+  width: 40%;
+  height: auto;
+  color: white;
+}
+
+.food-waste-money {
+  margin-top: 10px;
+  margin-left: 60px;
+}
+
+.food-wate {
+  margin-top: 10px;
+  margin-left: 60px;
+}
+
+.food-waste-steps {
+  margin-top: 10px;
+  margin-left: 60px;
+}
+
+.video {
+  width: 700px;
+  height: 400px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 200px;
+} */
 .image {
   background-image: url(https://b.zmtcdn.com/data/o2_assets/b90ed7f7c7f06ce7a5b94b967d4ce3eb1621255947.png);
   background-size: cover;
@@ -79,6 +149,9 @@
   margin-right: 300px;
   float: right;
   margin-top: 80px;
+  padding: 60px;
+  background-color: black;
+  opacity: 0.6;
 }
 
 .form {
@@ -120,7 +193,30 @@
 .video {
   width: 700px;
   height: 400px;
-  justify-content: center;
+  margin-left: 350px;
+  margin-top: 70px;
+  margin-bottom: 50px;
+}
+
+.images-statistics {
+  margin-top: 0px;
+}
+
+.images {
+  background-color: rgb(128, 209, 88);
+}
+
+.data-satistics {
   align-items: center;
+  justify-content: center;
   margin-left: 200px;
+  color: green;
+  font-weight: 500;
+  font-size: large;
+}
+
+.videotag {
+  margin-left: 360px;
+  margin-bottom: 150px;
+  margin-top: 0px;
 }
