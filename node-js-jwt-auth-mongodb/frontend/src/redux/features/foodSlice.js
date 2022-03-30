@@ -32,7 +32,7 @@ const foodSlice = createSlice({
   initialState: {
     food: {},
     foods: [],
-    userfoods: [],
+
     error: "",
     loading: false,
   },

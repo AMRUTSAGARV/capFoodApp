@@ -38,7 +38,6 @@ import RequestFood from "./components/RequestFood/RequestFood";
 import Orders from "./components/Orders/Orders";
 // import ProfileLgOut from "./components/Logout/Logout";
 import Logout from "./components/Logout/Logout";
-
 const App = () => {
   // const [showModeratorBoard, setShowModeratorBoard] = useState(false);
   // const [showAdminBoard, setShowAdminBoard] = useState(false);
@@ -80,6 +79,8 @@ const App = () => {
         <Route path="/orders" element={<Orders />} />
         <Route path="/logout" element={<Logout />} />
         <Route path="/profile" element={<Profile />} />
+        {/* <Route path="/AddFood" element={<AddFood />} /> */}
+        {/* <Route path="/RequestFood" element={<RequestFood />} /> */}
       </Routes>
 
       {/* <nav className="navbar navbar-expand navbar-dark bg-dark">

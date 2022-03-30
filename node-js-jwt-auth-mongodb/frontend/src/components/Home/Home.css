@@ -30,10 +30,13 @@
   color: white;
 } */
 
-.Home-image {
+/* .Home-image {
   max-width: 100%;
   max-height: fit-content;
   margin: auto;
   justify-content: center;
   opacity: 0.7;
+} */
+.back {
+  background-color: #a2a2f6;
 }

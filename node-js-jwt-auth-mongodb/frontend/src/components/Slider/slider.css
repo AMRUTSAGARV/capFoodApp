@@ -14,7 +14,7 @@
   position: relative;
   margin: auto;
   overflow: hidden;
-  background: radial-gradient(white, #a2a2f6);
+  background: radial-gradient(white, #a2a2f6, #a2a2f6);
 }
 
 .active {

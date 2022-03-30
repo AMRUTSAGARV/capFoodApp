@@ -1,17 +1,3 @@
-// import React from "react";
-// import Header from "../Header";
-
-// const RequestFood = () => {
-//   return (
-//     <div>
-//       <Header />
-//       <h1>Request Food</h1>
-//     </div>
-//   );
-// };
-
-// export default RequestFood;
-
 import React, { useState, useEffect } from "react";
 import {
   MDBCard,
@@ -20,15 +6,16 @@ import {
   MDBBtn,
   MDBInput,
 } from "mdb-react-ui-kit";
-import "mdb-react-ui-kit/dist/css/mdb.min.css";
 //import Chip from '@material-ui/core/chip';
 //import FileBase from "react-file-base64";
 import { useDispatch, useSelector } from "react-redux";
-import { createMeal } from "../../redux/features/RequestSlice";
+import { createHello } from "../../redux/features/RequestSlice";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
-import Header from "../Header";
 //import { yellow } from "@mui/material/colors";
+import "./Request.css";
+import Header from "../Header.js";
+import "mdb-react-ui-kit/dist/css/mdb.min.css";
 
 const initialState = {
   title: "",
@@ -36,12 +23,12 @@ const initialState = {
   Address: "",
 };
 const RequestFood = () => {
-  const [foodData, setFoodData] = useState(initialState);
-  const { error } = useSelector((state) => ({ ...state.food }));
+  const [helloData, setHelloData] = useState(initialState);
+  const { error } = useSelector((state) => ({ ...state.hello }));
   //const { user } = useSelector((state) => ({ ...state.auth }));
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { title, quantity, Address } = foodData;
+  const { title, quantity, Address } = helloData;
 
   useEffect(() => {
     error && toast.error(error);
@@ -50,19 +37,19 @@ const RequestFood = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (title && quantity && Address) {
-      const updatedFoodData = { ...foodData };
-      dispatch(createMeal({ updatedFoodData, navigate, toast }));
+      const updatedHelloData = { ...helloData };
+      dispatch(createHello({ updatedHelloData, navigate, toast }));
 
       handleClear();
     }
   };
   const onInputChange = (e) => {
     const { name, value } = e.target;
-    setFoodData({ ...foodData, [name]: value });
+    setHelloData({ ...helloData, [name]: value });
   };
 
   const handleClear = () => {
-    setFoodData({ title: "", quantity: "", Address: "" });
+    setHelloData({ title: "", quantity: "", Address: "" });
   };
   return (
     <div className="back">
@@ -77,7 +64,7 @@ const RequestFood = () => {
         className="container"
       >
         <MDBCard alignment="center">
-          <h5>Request Food</h5>
+          <h5 className="name">Request Food</h5>
           <MDBCardBody>
             <MDBValidation
               onSubmit={handleSubmit}
@@ -85,6 +72,7 @@ const RequestFood = () => {
               noValidate
             >
               <div className="col-md-12">
+                <span className="type">Name(Ngo,Old age home,ect)</span>
                 <MDBInput
                   placeholder="Enter Name"
                   type="text"
@@ -98,6 +86,7 @@ const RequestFood = () => {
                 />
               </div>
               <div className="col-md-12">
+                <span className="quality">Quantity</span>
                 <MDBInput
                   placeholder="Enter quantity"
                   type="text"
@@ -112,6 +101,7 @@ const RequestFood = () => {
               </div>
 
               <div className="cal-md-23">
+                <span className="quality1">Address</span>
                 <MDBInput
                   placeholder="Enter Address"
                   type="text"

@@ -1,0 +1,21 @@
+.lname {
+  margin-right: 160px;
+  color: rgb(14, 13, 13);
+  font-family: "Papyrus", "Copperplate", Fantasye;
+  font-weight: bolder;
+}
+.squality {
+  margin-right: 290px;
+  color: black;
+  font-family: "Papyrus", "Copperplate", Fantasye;
+  font-weight: bolder;
+}
+.Address {
+  margin-right: 290px;
+  color: black;
+  font-family: "Papyrus", "Copperplate", Fantasye;
+  font-weight: bolder;
+}
+.black {
+  color: blue;
+}

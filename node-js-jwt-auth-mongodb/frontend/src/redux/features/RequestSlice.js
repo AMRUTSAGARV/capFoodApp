@@ -1,12 +1,12 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import * as api from "../api";
 
-export const createMeal = createAsyncThunk(
-  "meal/createMeal",
-  async ({ updatedFoodData, navigate, toast }, { rejectWithValue }) => {
+export const createHello = createAsyncThunk(
+  "hello/createHello",
+  async ({ updatedHelloData, navigate, toast }, { rejectWithValue }) => {
     try {
-      const response = await api.createMeal(updatedFoodData);
-      toast.success("Food Added Successfully");
+      const response = await api.createHello(updatedHelloData);
+      toast.success("Food requested Successfully");
       navigate("/");
       return response.data;
     } catch (err) {
@@ -15,11 +15,11 @@ export const createMeal = createAsyncThunk(
   }
 );
 
-export const getMeals = createAsyncThunk(
-  "food/getMeals",
+export const getHellos = createAsyncThunk(
+  "hello/getHellos",
   async (_, { rejectWithValue }) => {
     try {
-      const response = await api.getMeals();
+      const response = await api.getHellos();
       return response.data;
     } catch (err) {
       return rejectWithValue(err.response.data);
@@ -28,34 +28,34 @@ export const getMeals = createAsyncThunk(
 );
 
 const RequestSlice = createSlice({
-  name: "meal",
+  name: "hello",
   initialState: {
-    food: {},
-    foods: [],
-    userfoods: [],
+    hello: {},
+    hellos: [],
+    userhellos: [],
     error: "",
     loading: false,
   },
   extraReducers: {
-    [createMeal.pending]: (state, action) => {
+    [createHello.pending]: (state, action) => {
       state.loading = true;
     },
-    [createMeal.fulfilled]: (state, action) => {
+    [createHello.fulfilled]: (state, action) => {
       state.loading = false;
-      state.foods = [action.payload];
+      state.hellos = [action.payload];
     },
-    [createMeal.rejected]: (state, action) => {
+    [createHello.rejected]: (state, action) => {
       state.loading = false;
       state.error = action.payload.message;
     },
-    [getMeals.pending]: (state, action) => {
+    [getHellos.pending]: (state, action) => {
       state.loading = true;
     },
-    [getMeals.fulfilled]: (state, action) => {
+    [getHellos.fulfilled]: (state, action) => {
       state.loading = false;
-      state.foods = action.payload;
+      state.hellos = action.payload;
     },
-    [getMeals.rejected]: (state, action) => {
+    [getHellos.rejected]: (state, action) => {
       state.loading = false;
       state.error = action.payload.message;
     },
