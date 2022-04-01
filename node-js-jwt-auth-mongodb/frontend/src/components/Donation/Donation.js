@@ -165,9 +165,9 @@ function App() {
           </div>
         </div>
         <div className="donation-details">
-          <h2 className="details-screen" style={{ color: "green" }}>
+          <h1 className="details-screen" style={{ color: "green" }}>
             Donate For Cause
-          </h2>
+          </h1>
           <h4 className="food-wate">
             Did you know that about 40 % of the food produced in India is
             wasted?
